@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Projet jeu de cartes - Tu n’y peux rien</title>
+	<meta charset="utf-8" />
+	<meta name="author" content="KHODJA Laiza, BOUATMANE Nesrine, BERRANDOU Nassim" />
+	<meta name="description" content="Mini-site présentant le projet 'Tu n’y peux rien', un jeu de cartes multijoueur avec simulation IA et interface web."/>
+	<meta name="keywords" content="jeu de cartes, simulation, Tu n'y peux rien, programmation, L2 Informatique, projet GLP, mini-site"/>
+	<link rel="stylesheet" href="style.css" />
+	<link rel="icon" href="images/favicon.png" type="image/x-icon"/>
+</head>
+
+<body>
+<header>
+	<a href="index.html"><img id="CYlogo" src="images/logo.png" width="216" height="72" alt="Logo CY Tech" /></a>
+	<img id="jeu-logo" src="images/logo-jeu.png" width="200" height="200" alt="Logo CY Tech" />
+	<h1>Les règles du jeu</h1>
+	<nav>
+		<ul>
+			<li><a href="index.html">Accueil</a></li>
+			<li><a href="regles.html">Règles</a></li>
+			<li><a href="mecanique.html">Mécanique</a></li>
+			<li><a href="bots.html">IA</a></li>
+			<li><a href="interface.html">Interface</a></li>
+			<li><a href="conclusion.html">Conclusion</a></li>
+		</ul>
+	</nav>
+<hr/>
+</header>
+
+<aside id="menu-secondaire">
+	<h2 id="sommaire">Sommaire</h2>
+	<ul>
+		<li><a href="#principe">Principe du jeu</a></li>
+		<li><a href="#combinaisons">Combinaisons</a></li>
+		<li><a href="#cartes-speciales">Cartes spéciales</a></li>
+		<li><a href="#bombes">Bombes</a></li>
+		<li><a href="#fin">Fin de partie</a></li>
+	</ul>
+</aside>
+
+
+<h2 id="principe">Principe général du jeu</h2>
+
+<p>
+Le jeu « Tu n’y peux rien » se joue avec un paquet de 54 cartes comprenant les cartes classiques
+ainsi que deux jokers. La partie se déroule entre trois et cinq joueurs. Chaque joueur reçoit
+cinq cartes au début de la partie, puis les joueurs jouent à tour de rôle dans un ordre défini
+automatiquement par le programme.
+</p>
+
+<p>
+L’objectif principal du jeu est de se débarrasser de toutes ses cartes avant les autres joueurs.
+Pour cela, chaque participant doit poser des cartes en respectant les règles de valeur et de
+combinaison imposées par le jeu.
+</p>
+
+<h3 id="combinaisons">Les différentes combinaisons possibles</h3>
+
+<p>
+Une combinaison correspond à un ensemble de cartes posé par un joueur lors de son tour.
+Le programme reconnaît automatiquement les types de combinaisons afin de vérifier la validité
+du coup joué. Plusieurs types de combinaisons sont autorisés.
+</p>
+
+<ul>
+	<li>
+	<strong>Carte simple :</strong> le joueur pose une seule carte dont la valeur doit être supérieure
+	à celle de la carte précédemment jouée.
+	</li>
+	<li>
+	<strong>Double :</strong> le joueur pose deux cartes de même valeur, par exemple deux cartes 7.
+	</li>
+	<li>
+	<strong>Triple :</strong> le joueur pose trois cartes identiques. Cette combinaison est considérée
+	comme une bombe et possède une priorité élevée.
+	</li>
+	<li>
+	<strong>Série :</strong> le joueur pose une suite de trois cartes consécutives, comme par exemple
+	4, 5 et 6.
+	</li>
+</ul>
+
+<p>
+Lorsqu’un joueur pose une combinaison, les joueurs suivants doivent obligatoirement poser
+une combinaison du même type et contenant le même nombre de cartes, sauf s’ils utilisent une
+carte spéciale ou une bombe.
+</p>
+
+<h3 id="cartes-speciales">Les cartes spéciales</h3>
+
+<p>
+Certaines cartes possèdent un rôle particulier et modifient le déroulement normal du jeu.
+Ces cartes permettent d’introduire une dimension stratégique supplémentaire.
+</p>
+
+<ul>
+	<li>
+	<strong>La carte 2 :</strong> cette carte est considérée comme une carte spéciale capable d’écraser
+	une combinaison classique, quelle que soit sa valeur.
+	</li>
+	<li>
+	<strong>Les jokers :</strong> les jokers sont des cartes polymorphes pouvant représenter n’importe
+	quelle autre carte dans une combinaison. Toutefois, ils ne peuvent jamais être joués seuls.
+	</li>
+</ul>
+
+<h3 id="bombes">Les bombes et leur hiérarchie</h3>
+
+<p>
+Les bombes sont des combinaisons prioritaires qui permettent de battre toutes les autres
+combinaisons, y compris la carte 2. Elles jouent un rôle central dans la stratégie du jeu.
+</p>
+
+<ul>
+	<li>
+	Un triple de cartes identiques (par exemple 3-3-3) constitue une bombe de base.
+	</li>
+	<li>
+	La combinaison de deux jokers représente la bombe la plus puissante du jeu.
+	</li>
+</ul>
+
+<p>
+Une bombe peut être utilisée à tout moment pour interrompre une combinaison en cours et
+reprendre l’avantage sur les autres joueurs.
+</p>
+
+<h3 id="fin">Condition de fin de partie</h3>
+
+<p>
+La partie se termine automatiquement lorsqu’un joueur n’a plus aucune carte en main.
+Le programme détecte cette situation sans intervention extérieure et désigne immédiatement
+ce joueur comme vainqueur de la partie.
+</p>
+
+<p>
+Une fois la partie terminée, les gains sont calculés en fonction du nombre de cartes jouées et
+des cartes spéciales utilisées pendant la partie.
+</p>
+
+<a class="right back-links" href="index.html">Retour à l’accueil</a>
+<a class="back-links" href="#">Retour en haut</a>
+
+<footer>
+<hr/>
+<p>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss"
+            alt="CSS Valide !" />
+    </a>
+</p>
+<p>Mini-site réalisé dans le cadre d’un projet – L2 Informatique</p>
+<p>© 2026 – KHODJA Laiza, BOUATMANE Nesrine, BERRANDOU Nassim</p>
+</footer>
+</body>
+</html>
+

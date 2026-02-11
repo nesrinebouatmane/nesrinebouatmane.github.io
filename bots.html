@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Projet jeu de cartes - Tu n’y peux rien</title>
+	<meta charset="utf-8" />
+	<meta name="author" content="KHODJA Laiza, BOUATMANE Nesrine, BERRANDOU Nassim" />
+	<meta name="description" content="Mini-site présentant le projet 'Tu n’y peux rien', un jeu de cartes multijoueur avec simulation IA et interface web."/>
+	<meta name="keywords" content="jeu de cartes, simulation, Tu n'y peux rien, programmation, L2 Informatique, projet GLP, mini-site"/>
+	<link rel="stylesheet" href="style.css" />
+	<link rel="icon" href="images/favicon.png" type="image/x-icon"/>
+</head>
+
+<body>
+<header>
+	<a href="index.html"><img id="CYlogo" src="images/logo.png" width="216" height="72" alt="Logo CY Tech" /></a>
+	<img id="jeu-logo" src="images/logo-jeu.png" width="200" height="200" alt="Logo CY Tech" />
+	<h1>Les bots et leur stratégie</h1>
+	<nav>
+		<ul>
+			<li><a href="index.html">Accueil</a></li>
+			<li><a href="regles.html">Règles</a></li>
+			<li><a href="mecanique.html">Mécanique</a></li>
+			<li><a href="bots.html">IA</a></li>
+			<li><a href="interface.html">Interface</a></li>
+			<li><a href="conclusion.html">Conclusion</a></li>
+		</ul>
+	</nav>
+<hr/>
+</header>
+
+<aside id="menu-secondaire">
+	<h2 id="sommaire">Sommaire</h2>
+	<ul>
+		<li><a href="#niveaux">Niveaux de difficulté</a></li>
+		<li><a href="#fonctionnement">Fonctionnement des bots</a></li>
+	</ul>
+</aside>
+
+<h2 id="niveaux">Les bots et les différents niveaux de difficulté</h2>
+
+<p>
+Dans le jeu « Tu n’y peux rien », les joueurs contrôlés par l’ordinateur, appelés <strong>bots</strong>,
+jouent un rôle essentiel pour simuler une partie multijoueur même lorsque tous les participants
+ne sont pas humains. Chaque bot dispose d’une intelligence artificielle de base capable de prendre
+des décisions selon le niveau de difficulté choisi par l’utilisateur.
+</p>
+
+<h3>Niveau Facile</h3>
+<p>
+Au niveau facile, le bot sélectionne ses coups de manière quasi aléatoire parmi toutes les
+combinaisons valides disponibles dans sa main. Il ne cherche pas à conserver les cartes fortes
+ni à anticiper les coups des autres joueurs. Ce mode est idéal pour permettre à un débutant
+de s’entraîner sans être rapidement surpassé.
+</p>
+
+
+<h3>Niveau Moyen</h3>
+<p>
+Au niveau moyen, le bot adopte une stratégie intermédiaire. Il privilégie la conservation des
+bombes et des jokers pour les moments critiques du jeu, tout en jouant les cartes de faible valeur
+en priorité. Cette approche lui permet d’augmenter ses chances de gagner les tours tout en
+préservant ses cartes puissantes pour des situations décisives.
+</p>
+
+
+<h3>Niveau Difficile</h3>
+<p>
+Au niveau difficile, le bot utilise une stratégie optimisée. Il analyse les combinaisons jouées
+par les autres joueurs et décide de manière stratégique du moment où il doit utiliser ses bombes
+ou ses jokers. L’objectif est de maximiser ses chances de se débarrasser de ses cartes tout en
+contrôlant le déroulement de la partie. Ce niveau est destiné à offrir un véritable défi aux
+joueurs expérimentés.
+</p>
+
+<h3 id="fonctionnement">Fonctionnement général des bots</h3>
+<p>
+Les bots respectent les mêmes règles que les joueurs humains : ils ne peuvent poser qu’un
+nombre de cartes correspondant à la combinaison en cours, doivent suivre la valeur minimale
+requise, et utilisent les cartes spéciales de manière stratégique. Le programme permet ainsi
+de simuler un jeu réaliste et équilibré, où les décisions des bots influencent activement la
+dynamique de la partie.
+</p>
+
+<a class="right back-links" href="index.html">Retour à l’accueil</a>
+<a class="back-links" href="#">Retour en haut</a>
+
+<footer>
+<hr/>
+<p>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss"
+            alt="CSS Valide !" />
+    </a>
+</p>
+<p>Mini-site réalisé dans le cadre d’un projet – L2 Informatique</p>
+<p>© 2026 – KHODJA Laiza, BOUATMANE Nesrine, BERRANDOU Nassim</p>
+</footer>
+</body>
+</html>
+

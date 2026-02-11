@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Projet jeu de cartes - Tu n’y peux rien</title>
+	<meta charset="utf-8" />
+	<meta name="author" content="KHODJA Laiza, BOUATMANE Nesrine, BERRANDOU Nassim" />
+	<meta name="description" content="Mini-site présentant le projet 'Tu n’y peux rien', un jeu de cartes multijoueur avec simulation IA et interface web."/>
+	<meta name="keywords" content="jeu de cartes, simulation, Tu n'y peux rien, programmation, L2 Informatique, projet GLP, mini-site"/>
+	<link rel="stylesheet" href="style.css" />
+	<link rel="icon" href="images/favicon.png" type="image/x-icon"/>
+</head>
+
+<body>
+<header>
+	<a href="index.html"><img id="CYlogo" src="images/logo.png" width="216" height="72" alt="Logo CY Tech" /></a>
+	<img id="jeu-logo" src="images/logo-jeu.png" width="200" height="200" alt="Logo CY Tech" />
+	<h1>Mécanique du jeu</h1>
+	<nav>
+		<ul>
+			<li><a href="index.html">Accueil</a></li>
+			<li><a href="regles.html">Règles</a></li>
+			<li><a href="mecanique.html">Mécanique</a></li>
+			<li><a href="bots.html">IA</a></li>
+			<li><a href="interface.html">Interface</a></li>
+			<li><a href="conclusion.html">Conclusion</a></li>
+		</ul>
+	</nav>
+<hr/>
+</header>
+
+<aside id="menu-secondaire">
+	<h2 id="sommaire">Sommaire</h2>
+	<ul>
+		<li><a href="#tours">Gestion des tours</a></li>
+		<li><a href="#ordre">Ordre de jeu</a></li>
+		<li><a href="#validation">Validation des coups</a></li>
+		<li><a href="#strategie">Stratégie et dynamique</a></li>
+	</ul>
+</aside>
+
+<h2 id="tours">Gestion des tours de jeu</h2>
+
+<p>Dans « Tu n’y peux rien », le déroulement d’une partie est organisé en tours successifs. 
+Chaque tour représente une séquence d’actions où tous les joueurs ont l’opportunité de jouer. 
+Le système n’est pas en temps réel : le programme garantit que chaque joueur agit uniquement
+lors de son tour et dans le bon ordre.</p>
+
+<p>Lors d’un tour, un joueur peut poser une combinaison de cartes valide selon les règles du jeu. 
+Les autres joueurs doivent ensuite répondre en posant une combinaison du même type et du même
+nombre de cartes, sauf s’ils utilisent une carte spéciale ou une bombe.</p>
+
+<p>À la fin de chaque tour complet, le programme distribue automatiquement une carte à chaque
+joueur afin de maintenir un nombre minimal de cartes dans la main et de garantir la continuité
+du jeu.</p>
+
+<h3 id="ordre">Ordre de jeu</h3>
+
+<p>Le joueur qui commence la partie est déterminé automatiquement par le logiciel. 
+La règle choisie est simple et équitable : le joueur possédant la carte de plus petite valeur parmi
+toutes les mains commence le jeu. À partir de ce joueur, le tour se poursuit dans le sens horaire
+jusqu’à ce que tous les participants aient joué.</p>
+
+
+<h3 id="validation">Validation des coups</h3>
+
+<p>Pour assurer l’équité et la cohérence du jeu, le programme vérifie automatiquement chaque
+coup joué par les participants. Cette validation se fait selon plusieurs critères :</p>
+
+<ul>
+	<li>Le nombre de cartes posées doit correspondre au type de combinaison en cours.</li>
+	<li>La valeur des cartes doit être supérieure à celle de la combinaison précédente,
+	sauf lorsqu’une carte spéciale ou une bombe est utilisée.</li>
+	<li>Les règles spécifiques, telles que l’utilisation du 2 ou des jokers, doivent être respectées.</li>
+</ul>
+
+<p>Si un joueur tente de poser une combinaison invalide, le programme empêche le coup et informe
+le joueur que son action n’est pas autorisée, garantissant ainsi une expérience de jeu claire
+et sans ambiguïté.</p>
+
+<h3 id="strategie">Stratégie et dynamique</h3>
+
+<p>Cette mécanique de tours permet également de mettre en place des stratégies pour les joueurs
+et les bots. Chaque décision influence les coups suivants et la progression de la partie, 
+rendant le jeu dynamique et imprévisible.</p>
+
+<a class="right back-links" href="index.html">Retour à l’accueil</a>
+<a class="back-links" href="#">Retour en haut</a>
+<footer>
+<hr/>
+<p>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss"
+            alt="CSS Valide !" />
+    </a>
+</p>
+<p>Mini-site réalisé dans le cadre d’un projet – L2 Informatique</p>
+<p>© 2026 – KHODJA Laiza, BOUATMANE Nesrine, BERRANDOU Nassim</p>
+</footer>
+</body>
+</html>
+
